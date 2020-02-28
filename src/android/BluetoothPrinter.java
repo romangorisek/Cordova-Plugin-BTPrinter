@@ -106,8 +106,8 @@ public class BluetoothPrinter extends CordovaPlugin {
             }
             return true;
         } else if (action.equals("setEncoding")) {
-            encoding = args.getString(0);
-            return true;
+            String encoding = args.getString(0);
+            setEncoding(callbackContext, encoding);
         } else if (action.equals("printText")) {
             try {
                 String msg = args.getString(0);
@@ -434,6 +434,11 @@ public class BluetoothPrinter extends CordovaPlugin {
             e.printStackTrace();
         }
 
+    }
+
+    void setEncoding(CallbackContext callbackContext, String newEncoding) {
+      encoding = newEncoding
+      callbackContext.success("ENCODING SET TO " + encoding);
     }
 
     boolean printText(CallbackContext callbackContext, String msg) throws IOException {

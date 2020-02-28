@@ -1,3 +1,7 @@
+# this fork edits
+
+- set encoding calls success callback
+
 # Cordova-Plugin-BTPrinter
 
 A cordova plugin for bluetooth printer for android platform.
