@@ -437,7 +437,7 @@ public class BluetoothPrinter extends CordovaPlugin {
     }
 
     void setEncoding(CallbackContext callbackContext, String newEncoding) {
-      encoding = newEncoding
+      encoding = newEncoding;
       callbackContext.success("ENCODING SET TO " + encoding);
     }
 
